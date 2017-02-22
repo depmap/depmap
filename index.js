@@ -4,23 +4,73 @@ const sleep = require('sleep');
 /**
  * TODO
  */
-function setDependedBy(depmap) {
+function setDirectDependents(depmap) {
   // Create empty arrays
   Object.keys(depmap).forEach(function (key) {
     let obj = depmap[key];
-    obj['dependedBy'] = []
+    obj['directDependents'] = []
   });
 
-  // Fill Arrays
+  // Fill directDependents
   Object.keys(depmap).forEach(function (key) {
     let obj = depmap[key];
     if(obj.dependsOn) {
       for(let dependency of obj.dependsOn) {
-        depmap[dependency].dependedBy.push(key);
+        depmap[dependency].directDependents.push(key);
       }
     }
   });
 }
+
+/**
+ * TODO
+ */
+function setDependents(depmap, key) {
+    var result = {}
+    var obj = depmap[key];
+    for (var i = 0; i < obj.directDependents.length; i++) {
+      var key = obj.directDependents[i];
+      result[key] = setDependents(depmap, key);
+    }
+    return result
+}
+
+// TODO RM
+var dep = {
+  mixin: {
+    home: {},
+    about: {},
+    template: {
+      home: {},
+      about: {}
+    }
+  }
+};
+
+function normalizeDependents(dependents, dependentsStack) {
+  var result = {}
+  dependentsStack.push([]);
+  Object.keys(dependents).forEach(function (key) {
+    // Update this dependency stack
+    dependentsStack[dependentsStack.length - 1].push(key);
+  });
+
+  /*
+    For each key:
+      If key isn't in the dependency stack already:
+        result[key] = normalizeDependents()
+
+    Pop stack
+    return result
+   */
+
+  console.log(dependentsStack)
+}
+
+function keyInDependentsStack(key, dependentsStack) {
+  return false; // TODO
+}
+
 
 /**
  * TODO
@@ -41,8 +91,12 @@ function update(depmap) {
 }
 
 function watch(depmap) {
-  setDependedBy(depmap); // TODO this mutates
-  console.log(depmap);
+  setDirectDependents(depmap); // TODO this mutates
+
+  Object.keys(depmap).forEach(function (key) {
+    depmap[key].dependencies = setDependents(depmap, key);
+    normalizeDependents(depmap[key].dependencies, []) // TODO
+  });
   /*
   while(true) {
     update(depmap);
@@ -101,6 +155,7 @@ var dependedBy = {
     },
   }
 };
+
 
 // Then gets pruned to this:
 var subMixinDependedBy = {
