@@ -1,6 +1,22 @@
 {
   "dependencies": {
-    "sleep": "^5.1.0",
-    "treeify": "^1.0.1"
-  }
+    "sleep": "^5.1.0"
+  },
+  "name": "depmap",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrandonRomano/depmap.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/depmap/depmap/issues"
+  },
+  "homepage": "https://github.com/depmap/depmap#readme",
+  "description": ""
 }
