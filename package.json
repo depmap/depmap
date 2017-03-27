@@ -1,6 +1,10 @@
 {
   "dependencies": {
-    "sleep": "^5.1.0"
+    "glob": "^7.1.1",
+    "lodash.isempty": "^4.4.0",
+    "lodash.merge": "^4.6.0",
+    "sleep": "^5.1.0",
+    "typeof": "^1.0.0"
   },
   "name": "depmap",
   "version": "1.0.0",
@@ -18,5 +22,8 @@
     "url": "https://github.com/depmap/depmap/issues"
   },
   "homepage": "https://github.com/depmap/depmap#readme",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "ava": "^0.18.2"
+  }
 }
