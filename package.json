@@ -1,9 +1,9 @@
 {
   "dependencies": {
+    "browser-sync": "^2.18.8",
     "glob": "^7.1.1",
     "lodash.isempty": "^4.4.0",
     "lodash.merge": "^4.6.0",
-    "sleep": "^5.1.0",
     "typeof": "^1.0.0"
   },
   "name": "depmap",
