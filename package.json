@@ -1,29 +1,38 @@
 {
+  "name": "depmap",
+  "description": "Dependency Map",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "enginesStrict": true,
+  "engines": {
+    "node": ">= 7.9.0"
+  },
   "dependencies": {
+    "@depmap/diff": "1.0.0",
+    "@depmap/errors": "1.0.0",
     "browser-sync": "^2.18.8",
     "glob": "^7.1.1",
     "lodash.isempty": "^4.4.0",
     "lodash.merge": "^4.6.0",
     "typeof": "^1.0.0"
   },
-  "name": "depmap",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "devDependencies": {
+    "ava": "^0.18.2"
   },
+  "homepage": "https://github.com/depmap/depmap#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BrandonRomano/depmap.git"
+    "url": "git+https://github.com/depmap/depmap.git"
   },
-  "author": "",
+  "author": "Henry Snopek <hhsnopek@gmail.com> (http://hhsnopek.com/)",
+  "contributors": [
+    "Brandon Romano <BrandonRRomano@gmail.com> (https://github.com/brandonromano)"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/depmap/depmap/issues"
-  },
-  "homepage": "https://github.com/depmap/depmap#readme",
-  "description": "",
-  "devDependencies": {
-    "ava": "^0.18.2"
   }
 }
