@@ -1,5 +1,5 @@
 {
-  "name": "depmap",
+  "name": "@depmap/depmap",
   "description": "Dependency Map",
   "version": "1.0.0",
   "main": "index.js",
@@ -15,8 +15,10 @@
     "@depmap/errors": "1.0.0",
     "browser-sync": "^2.18.8",
     "glob": "^7.1.1",
+    "lockfile": "^1.0.3",
     "lodash.isempty": "^4.4.0",
     "lodash.merge": "^4.6.0",
+    "pathwatcher": "^7.0.0",
     "typeof": "^1.0.0"
   },
   "devDependencies": {
