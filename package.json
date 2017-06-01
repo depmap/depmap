@@ -1,20 +1,20 @@
 {
   "name": "@depmap/depmap",
   "description": "Dependency Map",
-  "version": "1.0.0",
+  "version": "1.0.0-alpha",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "enginesStrict": true,
   "engines": {
-    "node": ">= 7.9.0"
+    "node": ">= 8.0.0"
   },
   "dependencies": {
-    "@depmap/diff": "1.0.0",
-    "@depmap/errors": "1.0.0",
-    "browser-sync": "^2.18.8",
-    "glob": "^7.1.1",
+    "@depmap/diff": "^1.0.0-alpha",
+    "@depmap/errors": "^1.0.0-alpha",
+    "browser-sync": "^2.18.12",
+    "glob": "^7.1.2",
     "lockfile": "^1.0.3",
     "lodash.isempty": "^4.4.0",
     "lodash.merge": "^4.6.0",
@@ -22,7 +22,7 @@
     "typeof": "^1.0.0"
   },
   "devDependencies": {
-    "ava": "^0.18.2"
+    "ava": "^0.19.1"
   },
   "homepage": "https://github.com/depmap/depmap#readme",
   "repository": {
