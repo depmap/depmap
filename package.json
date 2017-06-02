@@ -1,7 +1,7 @@
 {
   "name": "@depmap/depmap",
   "description": "Dependency Map",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0-alpha.1",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,7 +11,7 @@
     "node": ">= 8.0.0"
   },
   "dependencies": {
-    "@depmap/diff": "^1.0.0-alpha.0",
+    "@depmap/diff": "^1.0.0-alpha.1",
     "@depmap/errors": "^1.0.0-alpha.0",
     "browser-sync": "^2.18.12",
     "glob": "^7.1.2",
